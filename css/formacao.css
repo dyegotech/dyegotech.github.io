@@ -1,0 +1,161 @@
+.formacao {
+  background-color: #0b0c12;
+  padding: 120px 0px;
+  color: white;
+}
+
+.formacao .subtitulo {
+  color: #474d59;
+}
+
+.formacao-texto {
+  font-size: 1.5rem;
+  line-height: 1.33;
+  max-width: 50ch;
+  margin-bottom: 60px;
+  color: #a3a3a3;
+}
+
+.formacao-texto strong {
+  color: #ffffff;
+}
+
+.lista-formacao {
+  display: flex;
+  gap: 20px;
+  color: #929394;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.item-formacao {
+  flex: 1;
+  background-color: #6c8d9750;
+  border: 2px solid black;
+  border-radius: 3px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.formacao-curso {
+  color: white;
+  font-weight: bold;
+  font-size: 0.875rem;
+  flex: 1;
+}
+
+.item-formacao::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 5px;
+  background: linear-gradient(to right, #2d2add, #1b17dd);
+  left: -10px;
+  top: 25px;
+}
+
+.formacao-tipo,
+.formacao-instituicao {
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.cursos-extras {
+  color: white;
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+
+.cursos-extras span {
+  color: #8f8f8f;
+  text-align: right;
+}
+
+.lista-cursos {
+  display: grid;
+  gap: 8px;
+}
+
+.item-cursos {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cursos-extras h3 {
+  color: #8f8f8f;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.4;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.cursos {
+  margin-bottom: 60px;
+}
+
+.cursos-extras h3::before {
+  content: "";
+  width: 30px;
+  height: 22px;
+  position: absolute;
+  left: -40px;
+  display: block;
+}
+
+.cursos h3::before {
+  background-image: url("/img/curso.svg");
+}
+
+.idiomas h3::before {
+  background-image: url("/img/idioma.svg");
+}
+
+@media (width <=800px) {
+  .formacao {
+    padding: 60px 0px 40px 0px;
+  }
+
+  .subtitulo br {
+    display: none;
+  }
+
+  .formacao .subtitulo {
+    color: #6c8d9781;
+    font-size: 1.5rem;
+    letter-spacing: 0.2em;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .formacao-texto,
+  .lista-formacao,
+  .cursos {
+    margin-bottom: 40px;
+  }
+
+  .cursos-extras h3::before {
+    position: initial;
+    margin-bottom: 10px;
+  }
+
+  .cursos-extras h3 {
+    font-size: 1.3rem;
+  }
+
+  .item-cursos,
+  .item-idiomas {
+    font-size: 1rem;
+  }
+
+  .lista-formacao {
+    flex-direction: column;
+  }
+}
